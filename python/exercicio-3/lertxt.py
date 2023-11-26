@@ -6,8 +6,8 @@ def calcular_percentual(total, parcial):
 
 def criar_relatorio(usuarios):
     relatorio = "ACME Inc.                                    Uso do espaço em disco pelos usuários\n"
-    relatorio += "------------------------------------------------------------------------------------------------------------------------------\n"
-    relatorio += "  Nr.                 Usuário                                        Espaço utilizado                              % do uso\n\n"
+    relatorio += "----------------------------------------------------------------------------------------------------------------\n"
+    relatorio += "Nr.  Usuário                       Espaço utilizado          % do uso\n\n"
 
     total_bytes = sum(usuarios.values())
     nr = 1
@@ -36,6 +36,8 @@ def main():
 
     with open("relatorio.txt", "w") as arquivo_relatorio:
         arquivo_relatorio.write(relatorio)
+
+    print(relatorio) 
 
 if __name__ == "__main__":
     main()
